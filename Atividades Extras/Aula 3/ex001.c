@@ -1,4 +1,4 @@
-//Elabore um programa que escreva as mensagens “Início do programa” e “Fim” na tela, uma em cada linha, usando apenas um comando printf().
+//Faça um programa que leia um número inteiro e retorne seu antecessor e seu sucessor.
 #include <stdio.h>
 #include <windows.h>
 

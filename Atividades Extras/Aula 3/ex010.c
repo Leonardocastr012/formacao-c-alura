@@ -1,4 +1,8 @@
-//Elabore um programa que solicite ao usuário entrar com o valor do dia, mês e ano(inteiros). Em seguida, imprima os valores lidos separados por uma barra (\).
+//A importância de R$ 780.000,00 será dividida entre três ganhadores de um concurso, sendo que:
+//i. O primeiro ganhador receberá 46% do total.
+//ii. O segundo receberá 32% do total.
+//iii. O terceiro receberá o restante.
+//Calcule e imprima a quantia recebida por cada um dos ganhadores.
 #include <stdio.h>
 #include <windows.h>
 
@@ -7,16 +11,13 @@ int main() {
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    int dia, mes, ano;
+    double primeiro_ganhador, segundo_ganhador, terceiro_ganhador;
 
-    printf("Dia: ");
-    scanf("%d", &dia);
-    printf("Mês: ");
-    scanf("%d", &mes);
-    printf("Ano: ");
-    scanf("%d", &ano);
+    primeiro_ganhador = 780000 * 0.46;
+    segundo_ganhador = 780000 * 0.32;
+    terceiro_ganhador = 780000 * 0.22;
 
-    printf("%d/%d/%d", dia, mes, ano);
+    printf("O primeiro ganhou %.0f reais\nO segundo ganhou %.0f reais\nO terceiro ganhou %.0f reais", primeiro_ganhador, segundo_ganhador, terceiro_ganhador);
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;

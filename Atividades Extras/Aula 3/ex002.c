@@ -1,4 +1,4 @@
-//Escreva um programa que leia um número inteiro e depois o imprima.
+//Faça um programa que leia um número real e imprima a quinta parte desse número.
 #include <stdio.h>
 #include <windows.h>
 

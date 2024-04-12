@@ -1,4 +1,4 @@
-//Faça um programa que leia dois valores do tipo float. Use um único comando de leitura para isso. Em seguida, imprima os valores lidos na ordem inversa em que eles foram lidos.
+//Leia um ângulo em graus e apresente-o convertido em radianos. A fórmula de conversão é R = G * π/180, sendo G o ângulo em graus e R em radianos e π = 3.141592.
 #include <stdio.h>
 #include <windows.h>
 
@@ -7,12 +7,15 @@ int main() {
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    float valor1, valor2;
+    const float PI = 3.141592;
+    float R, G;
 
-    printf("Escreva dois números interios separados por espaço: ");
-    scanf("%f %f", &valor1, &valor2);
+    printf("Digite um ângulo: ");
+    scanf("%f", &G);
 
-    printf("%f e %f", valor2, valor1);
+    R = G * PI / 180;
+
+    printf("%.0f graus em radianos fica %.2f", G, R);
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;

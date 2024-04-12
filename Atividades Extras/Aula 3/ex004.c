@@ -1,4 +1,4 @@
-//Faça um programa que leia um número inteiro e depois o imprima usando o operador “%f”. Veja o que aconteceu.
+//Leia quatro valores do tipo float. Calcule e exiba a média aritmética desses valores.
 #include <stdio.h>
 #include <windows.h>
 

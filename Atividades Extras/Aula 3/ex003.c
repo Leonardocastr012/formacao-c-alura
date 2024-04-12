@@ -1,4 +1,4 @@
-//Escreva um programa que leia um número inteiro e depois imprima a mensagem “Valor lido:”, seguido do valor inteiro. Use apenas um comando printf().
+//Faça um programa que leia três valores inteiros e mostre sua soma.
 #include <stdio.h>
 #include <windows.h>
 
