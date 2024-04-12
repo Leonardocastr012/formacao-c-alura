@@ -1,4 +1,4 @@
-//Escreva um programa que leia um número inteiro e depois imprima a mensagem “Valor lido:”, seguido do valor inteiro. Use apenas um comando printf().
+//Faça um programa que leia dois números inteiros e depois os imprima na ordem inversa em que eles foram lidos.
 #include <stdio.h>
 #include <windows.h>
 
@@ -7,18 +7,14 @@ int main() {
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    int num1, num2, num3, soma;
+    int num1, num2;
 
     printf("Escreva um número inteiro: ");
     scanf("%d", &num1);
     printf("Escreva um número inteiro novamente: ");
     scanf("%d", &num2);
-    printf("Escreva um número inteiro novamente: ");
-    scanf("%d", &num3);
-    
-    soma = num1 + num2 + num3;
 
-    printf("A soma dos números é %d!", soma);
+    printf("%d e %d", num2, num1);
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
