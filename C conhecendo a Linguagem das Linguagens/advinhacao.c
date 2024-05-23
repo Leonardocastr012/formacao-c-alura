@@ -14,8 +14,7 @@ int main() {
     int numeroSecreto = 42;
     int chute;
     
-    for(int i = 1; i <= 3; i++){
-        //(start; parada; passo)
+    while(1){//loop infinito
         printf("Qual é o seu chute? ");
         scanf("%d", &chute);
         printf("Seu chute foi %d\n", chute);
@@ -24,7 +23,7 @@ int main() {
         if(acertou){
             printf("Parabêns! Você acertou!\n");
             printf("Jogue novamente!\n");
-
+            break; //Quebra o loop
         }
         else{
             int chuteMaior = (chute > numeroSecreto);
