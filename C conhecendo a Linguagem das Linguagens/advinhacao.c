@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <windows.h>
 
+#define NUMERO_DE_TENTATIVAS 5
+
 int main() {
     //Como colocar acentuação no windows
     UINT CPAGE_UTF8 = 65001;
@@ -14,7 +16,9 @@ int main() {
     int numeroSecreto = 42;
     int chute;
     
-    while(1){//loop infinito
+    for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i++){
+        
+        printf("Tetantiva %d de %d\n", i, NUMERO_DE_TENTATIVAS);
         printf("Qual é o seu chute? ");
         scanf("%d", &chute);
         printf("Seu chute foi %d\n", chute);
