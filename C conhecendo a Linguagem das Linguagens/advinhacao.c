@@ -13,21 +13,24 @@ int main() {
 
     int numeroSecreto = 42;
     int chute;
+    int acertou =(chute == numeroSecreto);
 
     printf("Qual é o seu chute? ");
     scanf("%d", &chute);
     printf("Seu chute foi %d\n", chute);
 
-    if(chute == numeroSecreto){
+    if(acertou){
         printf("Parabêns! Você acertou!\n");
         printf("Jogue novamente!\n");
 
     }
     else{
-        if(chute > numeroSecreto){
+        int chuteMaior = (chute > numeroSecreto);
+        if(chuteMaior){
             printf("O número secreto é menor do que o que você chutou!\n");
         }
-        if(chute < numeroSecreto){
+        int chuteMenor = (chute < numeroSecreto);
+        if(chuteMenor){
             printf("O número secreto é maior do que o que você chutou!\n");
         }
     }
