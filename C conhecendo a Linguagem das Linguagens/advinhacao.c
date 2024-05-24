@@ -15,6 +15,8 @@ int main() {
 
     int numeroSecreto = 42;
     int chute;
+    int menor = (chute > numeroSecreto);
+    int maior = (chute < numeroSecreto);
     
     for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i++){
         
@@ -26,18 +28,14 @@ int main() {
         int acertou =(chute == numeroSecreto);
         if(acertou){
             printf("Parabêns! Você acertou!\n");
-            printf("Jogue novamente!\n");
+            printf("Você é bom nisso! Jogue outra vez! \n");
             break; //Quebra o loop
         }
-        else{
-            int chuteMaior = (chute > numeroSecreto);
-            if(chuteMaior){
-                printf("O número secreto é menor do que o que você chutou!\n");
-            }
-            int chuteMenor = (chute < numeroSecreto);
-            if(chuteMenor){
-                printf("O número secreto é maior do que o que você chutou!\n");
-            }
+        else if(menor){
+            printf("O número secreto é menor do que o que você chutou!\n");
+        }
+        else if(maior){
+            printf("O número secreto é maior do que o que você chutou!\n");
         }
     }
 
