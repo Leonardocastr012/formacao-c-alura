@@ -15,8 +15,6 @@ int main() {
 
     int numeroSecreto = 42;
     int chute;
-    int menor = (chute > numeroSecreto);
-    int maior = (chute < numeroSecreto);
     
     for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i++){
         
@@ -25,17 +23,27 @@ int main() {
         scanf("%d", &chute);
         printf("Seu chute foi %d\n", chute);
 
+        if (chute > 0){
+            printf("Você não pode chutar números negativos!\n");
+            i--; //Vai diminuir essa tentativa, pois as tenativas válidas são apenas as com números positivos
+
+            continue; //Faz o código parar nessa parte e ir direto para o próximo loop
+        }
+
         int acertou =(chute == numeroSecreto);
+        int maior = (chute > numeroSecreto);
+        int menor = (chute < numeroSecreto);
+
         if(acertou){
             printf("Parabêns! Você acertou!\n");
             printf("Você é bom nisso! Jogue outra vez! \n");
             break; //Quebra o loop
         }
-        else if(menor){
-            printf("O número secreto é menor do que o que você chutou!\n");
-        }
         else if(maior){
-            printf("O número secreto é maior do que o que você chutou!\n");
+            printf("O seu chute foi maior que o número secreto!\n");
+        }
+        else if(menor){
+            printf("O seu chute foi menor que o número secreto!\n");
         }
     }
 
