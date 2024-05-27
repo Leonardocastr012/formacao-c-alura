@@ -15,7 +15,7 @@ int main() {
     int chute; //Quando a variável ainda não foi inicializada e você tenta saber seu valor, vai ter lixo de memória dentro dela. C deixa usa a variável não incializada então atenção
     int tentativas = 1;
 
-    int pontos = 1000;
+    double pontos = 1000;
     
     while(1){
         printf("Tentativa %d\n", tentativas);
@@ -44,13 +44,13 @@ int main() {
         }
         tentativas ++;
 
-        int pontosperdidos = (chute - numerosecreto) / 2;
+        double pontosperdidos = (chute - numerosecreto) / 2.0;//Tem que colocar em decimal pois compilador ler da direita para esquerda, se não deixar em decimal vai ser como se fosse inteiro e depois transformar em double, assim perdendo sua precisão no cálculo.
         pontos = pontos - pontosperdidos;
     }
 
     printf("FIM DE JOGO!\n");
     printf("Você acertou em %d tentativas!\n", tentativas);
-    printf("Total de pontos: %d\n", pontos);
+    printf("Total de pontos: %.2f\n", pontos);
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
