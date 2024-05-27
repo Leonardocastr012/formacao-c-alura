@@ -12,7 +12,7 @@ int main() {
     printf("*****************************************\n");
 
     int numerosecreto = 42;
-    int chute;
+    int chute; //Quando a variável ainda não foi inicializada e você tenta saber seu valor, vai ter lixo de memória dentro dela. C deixa usa a variável não incializada então atenção
     int tentativas = 1;
 
     int pontos = 1000;
