@@ -11,9 +11,11 @@ int main() {
     printf("* Bem vindo ao nosso jogo de advinhação *\n");
     printf("*****************************************\n");
 
-    int numeroSecreto = 42;
+    int numerosecreto = 42;
     int chute;
     int tentativas = 1;
+
+    int pontos = 1000;
     
     while(1){
         printf("Tentativa %d\n", tentativas);
@@ -26,8 +28,8 @@ int main() {
             continue; //Faz o código parar nessa parte e ir direto para o próximo loop
         }
 
-        int acertou =(chute == numeroSecreto);
-        int maior = (chute > numeroSecreto);
+        int acertou =(chute == numerosecreto);
+        int maior = (chute > numerosecreto);
 
         if(acertou){
             printf("Parabêns! Você acertou!\n");
@@ -41,10 +43,14 @@ int main() {
             printf("O seu chute foi menor que o número secreto!\n");
         }
         tentativas ++;
+
+        int pontosperdidos = (chute - numerosecreto) / 2;
+        pontos = pontos - pontosperdidos;
     }
 
     printf("FIM DE JOGO!\n");
-    printf("Você acertou em %d tentativas!", tentativas);
+    printf("Você acertou em %d tentativas!\n", tentativas);
+    printf("Total de pontos: %d\n", pontos);
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
