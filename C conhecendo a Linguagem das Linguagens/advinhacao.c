@@ -44,7 +44,7 @@ int main() {
         }
         tentativas ++;
 
-        double pontosperdidos = (chute - numerosecreto) / 2.0;//Tem que colocar em decimal pois compilador ler da direita para esquerda, se não deixar em decimal vai ser como se fosse inteiro e depois transformar em double, assim perdendo sua precisão no cálculo.
+        double pontosperdidos = (double)(chute - numerosecreto) / (double)2;//usando o casting
         pontos = pontos - pontosperdidos;
     }
 
