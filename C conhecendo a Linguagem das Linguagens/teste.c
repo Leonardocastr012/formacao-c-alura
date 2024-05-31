@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
+#include <stdlib.h>
 
 int main() {
     //Como colocar acentuação no windows
@@ -8,14 +9,9 @@ int main() {
     SetConsoleOutputCP(CPAGE_UTF8);
 
     int a = 3;
-    int b = 2;
-    double pontos = (double)a / (double)b; //casting
-    printf("%f\n", pontos);
-
-    double pi  = 3.1415;
-    int piconvertido = (int)pi;
-
-    printf("%f %d\n", pi, piconvertido);
+    int b = -3;
+    b = abs(b);
+    printf("%d %d\n", a, b);
     
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
