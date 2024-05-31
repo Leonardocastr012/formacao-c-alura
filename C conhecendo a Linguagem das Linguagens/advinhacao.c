@@ -44,10 +44,8 @@ int main() {
         }
         tentativas ++;
 
-        double pontosperdidos = (double)(chute - numerosecreto) / (double)2;//usando o casting
-        if(pontosperdidos < 0){
-            pontosperdidos *= -1;
-        }
+        double pontosperdidos = abs((double)(chute - numerosecreto)) / (double)2;//usando o casting
+        
         pontos = pontos - pontosperdidos;
     }
 
