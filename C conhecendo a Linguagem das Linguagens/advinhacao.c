@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
     //Como colocar acentuação no windows
@@ -11,7 +13,10 @@ int main() {
     printf("* Bem vindo ao nosso jogo de advinhação *\n");
     printf("*****************************************\n");
 
-    int numerosecreto = 42;
+    int segundos = time(0);
+    srand(segundos);
+    int numerogrande = rand();
+    int numerosecreto = numerogrande % 100;
     int chute; //Quando a variável ainda não foi inicializada e você tenta saber seu valor, vai ter lixo de memória dentro dela. C deixa usa a variável não incializada então atenção
     int tentativas = 1;
 
