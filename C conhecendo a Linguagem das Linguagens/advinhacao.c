@@ -14,7 +14,7 @@ int main() {
     printf("*****************************************\n");
 
     int segundos = time(0);
-    srand(segundos);
+    srand(segundos); //semente para o rand
     int numerogrande = rand();
     int numerosecreto = numerogrande % 100;
     int chute; //Quando a variável ainda não foi inicializada e você tenta saber seu valor, vai ter lixo de memória dentro dela. C deixa usa a variável não incializada então atenção
