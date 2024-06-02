@@ -19,10 +19,28 @@ int main() {
     int numerosecreto = numerogrande % 100;
     int chute; //Quando a variável ainda não foi inicializada e você tenta saber seu valor, vai ter lixo de memória dentro dela. C deixa usa a variável não incializada então atenção
     int tentativas = 1;
-
     double pontos = 1000;
+    int acertou = 0;
+
+    int nivel;
+    printf("Qual o nível de dificuldade?\n");
+    printf("(1) Fácil (2) Médio (3) Díficil\n\n");
+    printf("Escolha: ");
+    scanf("%d", &nivel);
+
+    int numerodetentativas;
+    if(nivel == 1){
+        numerodetentativas = 20;
+    }
+    else if(nivel == 2){
+        numerodetentativas = 15;
+    }
+    else if(nivel == 3){
+        numerodetentativas = 6;
+    }
+
     
-    while(1){
+    for(int i = 1; i <= numerodetentativas; i++){
         printf("Tentativa %d\n", tentativas);
         printf("Qual é o seu chute? ");
         scanf("%d", &chute);
@@ -33,12 +51,10 @@ int main() {
             continue; //Faz o código parar nessa parte e ir direto para o próximo loop
         }
 
-        int acertou =(chute == numerosecreto);
+        acertou =(chute == numerosecreto);
         int maior = (chute > numerosecreto);
 
         if(acertou){
-            printf("Parabêns! Você acertou!\n");
-            printf("Você é bom nisso! Jogue outra vez! \n");
             break;
         }
         else if(maior){
@@ -55,8 +71,16 @@ int main() {
     }
 
     printf("FIM DE JOGO!\n");
-    printf("Você acertou em %d tentativas!\n", tentativas);
-    printf("Total de pontos: %.2f\n", pontos);
+    if(acertou){
+        printf("Você ganhou!\n");
+        printf("Você é bom nisso! Jogue outra vez! \n");
+        printf("Você acertou em %d tentativas!\n", tentativas);
+        printf("Total de pontos: %.2f\n", pontos);
+    }
+    else{
+        printf("Você perdeu! Tente novamente!\n");
+        printf("Total de pontos: %.2f\n", pontos);
+    }
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
