@@ -29,14 +29,16 @@ int main() {
     scanf("%d", &nivel);
 
     int numerodetentativas;
-    if(nivel == 1){
-        numerodetentativas = 20;
-    }
-    else if(nivel == 2){
-        numerodetentativas = 15;
-    }
-    else if(nivel == 3){
-        numerodetentativas = 6;
+    switch(1){
+        case 1:
+            numerodetentativas = 20;
+            break;
+        case 2:
+            numerodetentativas = 15;
+            break;
+        default:
+            numerodetentativas = 6;
+            break;
     }
 
     
