@@ -2,15 +2,11 @@
 #include <windows.h>
 
 int main (){
-    char letra1 = 'M';
-    char letra2 = 'E';
-    char letra3 = 'L';
-    char letra4 = 'A';
-    char letra5 = 'N';
-    char letra6 = 'C';
-    char letra7 = 'I';
-    char letra8 = 'A';
 
-    printf("%c%c%c%c%c%c%c%c\n", letra1, letra2, letra3, letra4, letra5, letra6, letra7, letra8);
-    
+    char palavrasecreta[20];
+
+    sprintf(palavrasecreta, "MELANCIA");
+
+    printf("%s", palavrasecreta);
+//último caractere da string em array tem que ser \0 para saber onde para a palavra dentro do array
 }
