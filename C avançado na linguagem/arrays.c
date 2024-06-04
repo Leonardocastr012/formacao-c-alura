@@ -7,6 +7,11 @@ int main (){
 
     sprintf(palavrasecreta, "MELANCIA");
 
-    printf("%s", palavrasecreta);
-//último caractere da string em array tem que ser \0 para saber onde para a palavra dentro do array
+    int acertou = 0;
+    int enforcou = 0;
+
+    do {
+        //começar o nosso jogo
+    } while(!acertou && !enforcou);//Vai tá dando 1 em ambas variaveis então o loop vai tá funcionando pois 1 é True
+    
 }
