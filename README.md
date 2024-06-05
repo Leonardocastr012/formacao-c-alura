@@ -1,6 +1,6 @@
 # formacao-c-alura
 ## Repositório focado na aprendizagem da linguagem C
-### C conhecendo a Linguagem das Linguagens
+### C Conhecendo a Linguagem das Linguagens
 > Uso de condicionais, laços de repetição, funções e lógica de programação.
-### C 
->
+### C Avançado na Linguagem 
+> 
